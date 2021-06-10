@@ -3,9 +3,7 @@ COMANDOS EN LA TERMINAL
 La raiz es / de todo nuestro directorio de carpetas
 
 _En el promt nombreUsuario@nombrePc_
-
 &nbsp;
-
 *Importante que algunos comandos necesitan que se especifique algo, por temas de dejarlo implicito utilizare el [archivo, ruta, etc]*
 
 *Los archivos oculto se muestra con un punto antes
@@ -53,4 +51,13 @@ _En el promt nombreUsuario@nombrePc_
 | `less [archivo_de_texto]` | Explorar un archivo de texto, provee una interfaz para explorar el archivo |
 | `xdg-open [archivo_texto]` | Nos abre nuestro editor de texto predeterminado para editar el texto |
 
+## WildCards
+| Comando | Descripcion |
+| ------- | ----------- |
+| `ls *.txt` | Mostrar los archivos que terminen en .txt | 
+| `ls datos*` | Mostrar todos los archivos que contengan en el nombre datos, sin impotar los que valla despues | 
+| `ls datos?` | Mostrar todos los archivos que en su nombre contenga la palabra datos y una letra de mas |
+| `ls [[:upper:]]*` | Mostrar todos los directorios que o archivos que en su nombre la primera letra comienze con una mayuscula |
+| `ls [[:lowe:]]*` | Mostrar todos los directorios que o archivos que en su nombre la primera letra comienze con una minuscula |
+| `ls [ad]*` | Mostrar todos los archivos que en su nombre comience con la letra a o d |
 
