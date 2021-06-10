@@ -8,4 +8,10 @@ _En el promt nombreUsuario@nombrePc_
 
 | Comando | Descripcion |
 | ------- | ----------- |
-|`ls` | Listar todos los directorios en la carpeta |
+| `ls` | Listar todos los directorios en la carpeta en la que nos encontramos|
+| `cd ruta` | _Change Directory_, cambiar el directorio a uno en especifico |
+| `clear` o `cls` | Limpia la informacion en la terminal |
+| `pwd` | _Print Working Directory_, nos muestra la ruta en donde estamos |
+| `file archivo` | el comando nos describe que archivo es el que estamos trabajando | 
+
+
