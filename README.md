@@ -3,6 +3,9 @@ COMANDOS EN LA TERMINAL
 La raiz es / de todo nuestro directorio de carpetas
 
 _En el promt nombreUsuario@nombrePc_
+
+&nbsp;
+
 *Importante que algunos comandos necesitan que se especifique algo, por temas de dejarlo implicito utilizare el [archivo, ruta, etc]*
 
 *Los archivos oculto se muestra con un punto antes
@@ -43,6 +46,7 @@ _En el promt nombreUsuario@nombrePc_
 
 ## Comandos para manipular el contenido de archivos
 | Comando | Descripcion |
+| ------- | ----------- |
 | `head [archivo]` | Muestra las primera 10 lineas del archivo, el archivo tiene que ser de texto |
 | `head [archivo] -n [cantidad]` | Muestras las n primeras lineas de un archivo |
 | `tail [archivo]` | Muestras las 10 ultimas lineas del archivo, se puede utilizar el modificador -n |
