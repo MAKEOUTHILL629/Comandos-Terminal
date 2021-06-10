@@ -22,7 +22,7 @@ _En el promt nombreUsuario@nombrePc_
 
 ## Comando ls con sus respectivas variantes
 | Comando | Descripcion | 
-| ======= | =========== |
+| ------- | ----------- |
 | `ls -l` | Muestra todos los archivos y directorios en forma de lista |
 | `ls -la` | Muestra todos los archivos incluidos los ocultos |
 | `ls -ls` | Muestra en orden todos los directorios y documentos por espacio en disco |
