@@ -63,11 +63,10 @@ _En el promt nombreUsuario@nombrePc_
 | `ls [ad]*` | Mostrar todos los archivos que en su nombre comience con la letra a o d |
 
 ## Redireccionamientos
-
+La terminal maneja tres formas en manipular la informacion.
 stdin = 0, entrada en la terminal
 stdout = 1, salida normal
 stderr = 2, salida de error
-
 
 | Comando | Ejemplo | Descripcion |
 | ------- | ------- | ----------- |
