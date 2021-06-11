@@ -51,6 +51,7 @@ _En el promt nombreUsuario@nombrePc_
 | `less [archivo_de_texto]` | Explorar un archivo de texto, provee una interfaz para explorar el archivo |
 | `xdg-open [archivo_texto]` | Nos abre nuestro editor de texto predeterminado para editar el texto |
 
+
 ## WildCards
 | Comando | Descripcion |
 | ------- | ----------- |
@@ -60,4 +61,27 @@ _En el promt nombreUsuario@nombrePc_
 | `ls [[:upper:]]*` | Mostrar todos los directorios que o archivos que en su nombre la primera letra comienze con una mayuscula |
 | `ls [[:lowe:]]*` | Mostrar todos los directorios que o archivos que en su nombre la primera letra comienze con una minuscula |
 | `ls [ad]*` | Mostrar todos los archivos que en su nombre comience con la letra a o d |
+
+## Redireccionamientos
+
+stdin = 0, entrada en la terminal
+stdout = 1, salida normal
+stderr = 2, salida de error
+
+
+| Comando | Ejemplo | Descripcion |
+| ------- | ------- | ----------- |
+| `>` | `ls Descargas > archivo.txt` | Guarda el resultado en un archivo de texto |
+| `>>` | `ls Descargas >> archivo_concatenado.txt` | Guarda el resultado en un archivo de texto, pero esta vez concatena lo que este en el archivo de texto |
+| `2>` | `ls carpeta_no_existe 2> archivo.txt` | Guarda el resultado en un archivo de texto, pero esta vez guarda el error del terminal, como es stdout 1, stderr 2 y stdin 0 |
+|`2>&1`| `ls asdasd > outputerror.txt 2>&1` | Guarda el resultado sin importar si es de error o un estandar output |
+| `|` | `ls -lh ./ | less` | El operador pipe nos ayuda a redirigir el stdout de un comando a otro de manera stdin |
+| `| tee [archivo_a_crear]` | `ls -lh | tee output.txt | less` | Nos ayuda a crear un archivo con la salida de anterior comando, se puede decir que tee es > |
+| `;` | `ls -lh; mkdir nueva_carpeta; cal` | El operador ; nos ayudara a ejecutar comandos de manera sincrona es decir uno tras de otro |
+| `&` | `ls & date & cal` | Ejecuta los comandos de manera asincrona es decir por cada comando crea un proceso en diferentes hilos, se ejecuta simultaneamente |
+| `&&` | `mkdir test && cd test` | Para ejecutar comandos si y solamente si, se ejecutan de manera correcta |
+| `||` | `cd asdasd || touch archivo.txt || echo "Archivo creado"` | Para ejecutar comandos sin importar si no se cumplen |
+
+
+
 
