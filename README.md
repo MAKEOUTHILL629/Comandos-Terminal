@@ -74,13 +74,29 @@ stderr = 2, salida de error
 | `>>` | `ls Descargas >> archivo_concatenado.txt` | Guarda el resultado en un archivo de texto, pero esta vez concatena lo que este en el archivo de texto |
 | `2>` | `ls carpeta_no_existe 2> archivo.txt` | Guarda el resultado en un archivo de texto, pero esta vez guarda el error del terminal, como es stdout 1, stderr 2 y stdin 0 |
 |`2>&1`| `ls asdasd > outputerror.txt 2>&1` | Guarda el resultado sin importar si es de error o un estandar output |
-| `|` | `ls -lh ./ | less` | El operador pipe nos ayuda a redirigir el stdout de un comando a otro de manera stdin |
+| `l` | `ls -lh ./ | less` | El operador pipe nos ayuda a redirigir el stdout de un comando a otro de manera stdin |
 | `| tee [archivo_a_crear]` | `ls -lh | tee output.txt | less` | Nos ayuda a crear un archivo con la salida de anterior comando, se puede decir que tee es > |
 | `;` | `ls -lh; mkdir nueva_carpeta; cal` | El operador ; nos ayudara a ejecutar comandos de manera sincrona es decir uno tras de otro |
 | `&` | `ls & date & cal` | Ejecuta los comandos de manera asincrona es decir por cada comando crea un proceso en diferentes hilos, se ejecuta simultaneamente |
 | `&&` | `mkdir test && cd test` | Para ejecutar comandos si y solamente si, se ejecutan de manera correcta |
-| `||` | `cd asdasd || touch archivo.txt || echo "Archivo creado"` | Para ejecutar comandos sin importar si no se cumplen |
+| `ll` | `cd asdasd || touch archivo.txt || echo "Archivo creado"` | Para ejecutar comandos sin importar si no se cumplen |
 
 
+## Tipos de Permisos
 
+#Tipos de archivos
+- => Archivo normal
+d => Directorio o carpeta
+l => Link simbolico
+b => Bloque de archivos, guarda infomacion
 
+#Permisos
+w => write, escritura
+r => Read, lectura
+x => Executable, ejecutable
+
+# Tipo de modo
+| Dueño | Grupo | World |
+| ----- | ----- | ----- |
+|  wrx  |  wrx  |  wrx  |
+|  111  |  101  |  000  |
