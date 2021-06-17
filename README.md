@@ -89,7 +89,7 @@ Por temas de markdow, la l es |
 ## Tipos de Permisos
 
 # Tipos de archivos
-- - => Archivo normal
+- `- => Archivo normal
 - d => Directorio o carpeta
 - l => Link simbolico
 - b => Bloque de archivos, guarda infomacion
