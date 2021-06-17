@@ -66,9 +66,9 @@ _En el promt nombreUsuario@nombrePc_
 
 ## Redireccionamientos
 La terminal maneja tres formas en manipular la informacion.
-stdin = 0, entrada en la terminal
-stdout = 1, salida normal
-stderr = 2, salida de error
+- stdin = 0, entrada en la terminal
+- stdout = 1, salida normal
+- stderr = 2, salida de error
 
 La tabla se entiende con que la `l` del comando es `|`, un _Pipe Operator_.
 
@@ -89,7 +89,7 @@ La tabla se entiende con que la `l` del comando es `|`, un _Pipe Operator_.
 ## Tipos de Permisos
 
 # Tipos de archivos
-- `- => Archivo normal
+- *-* => Archivo normal
 - d => Directorio o carpeta
 - l => Link simbolico
 - b => Bloque de archivos, guarda infomacion
