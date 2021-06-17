@@ -30,6 +30,8 @@ _En el promt nombreUsuario@nombrePc_
 | `man [comando]` | El manual del comando que se utilizara |
 | `info [comando]` | Mas informacion del comando |
 | `whatis [comando]` | Breve descripcion del comando |
+| `ln -s [ruta] [nombre]` | Crea un link simbolico a una ruta establecida |
+| `echo $0` | Para saber que shell se esta usando |
 
 ## Comandos basicos con sus respectivas variantes
 | Comando | Descripcion | 
@@ -86,13 +88,13 @@ Por temas de markdow, la l es |
 
 ## Tipos de Permisos
 
-#Tipos de archivos
-- => Archivo normal
+# Tipos de archivos
+`- => Archivo normal
 d => Directorio o carpeta
 l => Link simbolico
 b => Bloque de archivos, guarda infomacion
 
-#Permisos
+# Permisos
 w => write, escritura
 r => Read, lectura
 x => Executable, ejecutable
@@ -100,5 +102,73 @@ x => Executable, ejecutable
 # Tipo de modo
 | Dueño | Grupo | World |
 | ----- | ----- | ----- |
-|  wrx  |  wrx  |  wrx  |
+|  rwx  |  rwx  |  rwx  |
 |  111  |  101  |  000  |
+|   7   |   5   |   1   |
+
+# Simbolico
+
+| Simbolo | Significado |
+| ------- | ----------- |
+| u | Solo usuario |
+| g | Solo grupo |
+| o | Solo otros |
+| a | Todos |
+
+| Comando | Ejemplo | Descripcion |
+| ------- | ------- | ----------- |
+| `chmod [permisos] [archivo]` | `chmod 755 mitexto.txt` | El comando me permite cambiar y asignar permisos de carpetas o archivos |
+| `chmod [simbolo][+-][permisos] [archivo]` | `chmod u-r mitexto.txt` | Me permite quitarle o agregar permisos a un tipo de usuario en especifico |
+| `whoami` | `whoami` | Me permite conocer desde que usuario estoy en la terminal |
+| `id` | `id` | Informacion sobre el usuario, permisos, grupos, id etc | 
+| `su [usuario]` | `su root` | Realizo un cambio al usuario root, importante colocar la clave del root | 
+| `passwd` | `passwd` | Cambiar la clave de mi usuario |
+
+## Comandos de busqueda
+| Comando | Ejemplo | Descripcion |
+| ------- | ------- | ----------- |
+| `which [comando]` | `which code` | Busca el binario en el path, donde se encuentra el comando en la shell | 
+| `find [ruta_desde_donde_comienza] -name [nombre]` | `find ./ -name *.txt` | Busca un archivo desde donde se le especifique la ruta, comienza a buscar |
+| `find [ruta_desde_donde_empieza] -type [d/f] -name [nombre]` | `find ./ -type d -name Documents ` | Busca un archivo o carpeta desde una ruta en especifica |  
+| `find [ruta_desde_donde_comienza] -size [tamanio_archivo]` | `find ./ -size 20m` | Busca los archivos con un tamanio mayor | 
+| `grep [expresion_regular] [archivo]`  | `grep Towers excel.cvs` | Encuentra todas las coincidencias en un archivo, las coincidencias con la expresion regular |
+| `grep [expresion_regular] -i [archivo]` | `grep -i The movies.csv` | Realiza la busqueda ignorando las mayusculas o minusculas el keySensive |
+| `grep -c [expresion_regular] [archivo]` | `grep -c the movies.txt` | Realiza el conteo de las coincidencias en el archivo |
+| `grep -v [expresion_regular] [archivo]` | `grep -v towers movies.txt` | Realiza la busqueda de las palabras que no coincidan con la expresion regular |
+| `wc [archivo] -l -c -w` | `wc movies.csv` | Realiza el conteo de las lineas, letras o caracteres, numero de bits y el nombre del archivo |
+
+
+## Utilizades de Red
+| Comando | Ejemplo | Descripcion |
+| ------- | ------- | ----------- |
+| `ping [pagina_web]` | `ping www.google.com` | Se usa para recibir paquetes de una pagina |
+| `curl [pagina_web]`| `curl www.google.com` | Se usa para traer el html de una pagina web |
+| `wget [pagina_web]`| `wget www.googgle.com` | Guarda el archivo o la respuesta del servidor |  
+| `traceroute [pagina_web]` | `traceroute www.google.com` | Traza el camino que recorre normalmente para conectarme al servidor o pagina web |
+| `netstat -i`| `netstat -i` | Muestra todos los dispositivos de red |
+| `ifconfig` | `ifconfig` | Muestra la informacion de mi conexion de red |
+
+## Comprimiendo Archivos
+| Comando | Ejemplo | Descripcion |
+| ------- | ------- | ----------- |
+| `tar -cvf [archivo_despues_de_comprimir.tar] [archivo_comprimir]`| `tar -cvf ToCompress.tar ToCompress` | Me permite comprimir un archivo a .tar, c es comprimir, v es verbose para que se vea lo que hace el comando, f de file |
+| `tar -cvzf [archivo_despues_de_comprimir.tar.gz] [archivo_comprimir]` | `tar -cvzf ToCompress.tar.gz ToCompress` | Comprime un archivo a .gz que es un algoritmo eficiente, para decirle que es gz, se le agrega la z |
+| `tar -xzvf [archivo_comprimido.tar.gz]` | `tar -xzvf ToCompress.tar.gz` | Descomprime el archivo tar.gz, x es de descomprimir | 
+| `zip -r [archivo_despues_comprimir.zip] [archivo_a_comprimir]` | ` zip -r toCompressInZip.zip ToCompress` | Comprime un archivo a .zip |
+| `unzip [archivo_comprimido.zip]`| `unzip toCompressInZip.zip` | Descomprime mi archivo .zip | 
+
+## Manejo de procesos
+| Comando | Ejemplo | Descripcion |
+| ------- | ------- | ----------- |
+| `ps` | `ps` | Observar los procesos que estan corriendo de fondo |
+| `kill [PID_proceso]` | `kill 123465` | Mata a un proceso | 
+| `top` | `top` | Mostrar toda la informacion de todos los procesos |
+
+## VIM
+| Comando | Descripcion |
+| ------- | ----------- |
+| `vim` | Abre el editor de texto vim |
+| `vim nuevo_archivo` | me crear un archivo y me abre el editor de vim |
+| `:q` | Para salir de vim |
+
+
