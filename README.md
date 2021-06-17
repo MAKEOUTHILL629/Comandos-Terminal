@@ -70,7 +70,7 @@ stdin = 0, entrada en la terminal
 stdout = 1, salida normal
 stderr = 2, salida de error
 
-Por temas de markdow, la l es |
+La tabla se entiende con que la l del comando es |, un _Pipe Operator_.
 
 | Comando | Ejemplo | Descripcion |
 | ------- | ------- | ----------- |
